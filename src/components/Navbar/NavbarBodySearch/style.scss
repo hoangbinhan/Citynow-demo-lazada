@@ -18,13 +18,14 @@
     &__button {
         width: 45px;
         height: 45px;
-        text-align: center;
         line-height: 45px;
         background-color: #f57224;
         border-radius: 0 4px 4px 0;
-
+        text-align: center;
         & i {
             color: white;
+            height: auto;
+            font-size: 14px;
         }
     }
 }

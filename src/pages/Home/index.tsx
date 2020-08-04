@@ -6,6 +6,7 @@ import Deal from 'components/Deal';
 import Popular from 'components/Popular';
 import Collections from 'components/Collections';
 import Mall from 'components/Mall';
+import Loading from 'components/Loading';
 const Categories = React.lazy(() => import('components/Categories'));
 
 const Home: React.FC = () => {
@@ -17,7 +18,7 @@ const Home: React.FC = () => {
       <Popular />
       <Collections />
       <Mall />
-      <Suspense fallback={<div>...loading</div>}>
+      <Suspense fallback={<Loading />}>
         <Categories />
       </Suspense>
     </div>

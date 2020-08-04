@@ -10,6 +10,7 @@ import Cart from './pages/Cart';
 import Footer from './components/Footer';
 import NotFound from 'components/NotFound';
 import Products from 'pages/Products';
+import Loading from 'components/Loading';
 
 function App() {
   return (

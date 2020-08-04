@@ -12,7 +12,7 @@ interface Props {
 const CartItem: React.FC<Props> = ({ product, quantity }) => {
   return (
     <div className='CartItem'>
-      <CartItemHeader brandStore='VIP' />
+      <CartItemHeader brandStore='' />
       <CartItemBody product={product} quantity={quantity} />
     </div>
   );

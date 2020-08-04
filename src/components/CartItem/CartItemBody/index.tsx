@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import CartItemPrice from './CartItemPrice';
 import CartItemProduct from './CartItemProduct';
 import './style.scss';
+import Popup from './Popup';
 
 interface Props {
   product: product;
@@ -48,6 +49,7 @@ const CartItemBody: React.FC<Props> = ({ product, quantity }) => {
           +
         </div>
       </div>
+      {/* <Popup title='hihi' description='aiai' type='sd' /> */}
     </div>
   );
 };

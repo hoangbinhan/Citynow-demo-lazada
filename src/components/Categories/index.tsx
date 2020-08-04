@@ -12,12 +12,14 @@ const visible = 18;
 const Categories: React.FC = () => {
   const [perPage, setPerPage] = useState(18);
   const dispatch = useDispatch();
+
   useEffect(() => {
     const action = fetchProducts();
     dispatch(action);
 
     return () => {};
   }, [dispatch]);
+
   const products = useSelector((state: AppState) => state.products.product);
 
   let results = products
