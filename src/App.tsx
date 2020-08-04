@@ -27,6 +27,7 @@ function App() {
           </Switch>
           <Footer />
         </BrowserRouter>
+        <h1>xin chao</h1>
       </div>
     </Provider>
   );
