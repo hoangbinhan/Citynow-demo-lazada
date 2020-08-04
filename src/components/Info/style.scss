@@ -1,0 +1,101 @@
+.main-info {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  .image {
+    width: 330px;
+    height: 330px;
+    background-color: green;
+  }
+  .product-detail {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    height: auto;
+    .title {
+      color: black;
+      font-size: 20px;
+      height: auto;
+    }
+    .rating {
+      font-size: 16px;
+      height: auto;
+    }
+    .brand {
+      padding-bottom: 10px;
+      font-size: 16px;
+      border-bottom: 1px solid rgba($color: #000000, $alpha: 0.5);
+      height: auto;
+    }
+    .price {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      margin-top: 10px;
+      .product-price {
+        font-size: 30px;
+        color: tomato;
+        height: auto;
+      }
+      .old-price {
+        display: flex;
+        height: auto;
+        width: 100%;
+        .product-old-price {
+          font-size: 20px;
+          color: rgba($color: #000000, $alpha: 0.5);
+          text-decoration: line-through;
+          height: auto;
+        }
+        .discount {
+          font-size: 16px;
+          color: black;
+          line-height: 16px;
+          margin-left: 5px;
+          margin-top: 5px;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  .numberPicker {
+    display: flex;
+    height: auto;
+    .next-number-handle {
+      width: 30px;
+      height: 30px;
+      background-color: #eee;
+      font-size: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      opacity: 0.7;
+      -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+      -khtml-user-select: none; /* Konqueror HTML */
+      -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+      user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+    }
+    .next-number-handle:hover {
+      opacity: 1;
+    }
+    .number-input {
+      width: 40px;
+      height: 30px;
+      background-color: white;
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .button__box {
+    display: flex;
+    width: auto;
+    height: auto;
+  }
+}

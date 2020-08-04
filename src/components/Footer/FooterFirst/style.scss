@@ -1,0 +1,9 @@
+.footerFirst {
+    height: auto;
+    width: 100%;
+    &__banner {
+        display: flex;
+        justify-content: space-around;
+        height: auto;
+    }
+}

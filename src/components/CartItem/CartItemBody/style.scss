@@ -1,0 +1,44 @@
+.CartItem__Body {
+  width: 100%;
+  height: 139px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+
+  .numberPicker {
+    height: auto;
+    display: flex;
+    .next-number-handle {
+      width: 30px;
+      height: 30px;
+      background-color: #eee;
+      font-size: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      opacity: 0.7;
+      -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+      -khtml-user-select: none; /* Konqueror HTML */
+      -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+      user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+    }
+    .next-number-handle:hover {
+      opacity: 1;
+    }
+    .number-input {
+      width: 40px;
+      height: 30px;
+      background-color: white;
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      outline: none;
+      text-align: center;
+    }
+  }
+}

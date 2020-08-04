@@ -1,0 +1,13 @@
+.notFound {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__title {
+    height: auto;
+    font-size: 20px;
+    color: rgba($color: #000000, $alpha: 0.6);
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,36 @@
+.menu_dropdown {
+    width: 200px;
+    height: 100%;
+    list-style: none;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+
+    &__item-root {
+        margin: 0;
+        height: 27px;
+        width: 100%;
+        font-size: 12px;
+        padding: 0px 10px;
+        position: relative;
+        line-height: 30px;
+        &:hover {
+            background-color: #eee;
+            color: #f57224;
+        }
+        &:hover &-icon {
+            opacity: 1;
+        }
+
+        &-icon {
+            position: absolute;
+            right: 8px;
+            color: #f57224;
+            opacity: 0;
+        }
+    }
+}

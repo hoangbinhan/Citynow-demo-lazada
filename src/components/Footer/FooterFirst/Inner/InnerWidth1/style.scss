@@ -1,0 +1,32 @@
+.InnerWidth1 {
+  margin-right: 20px;
+  width: 25%;
+  height: auto;
+  &__title {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 35px;
+    margin: 0;
+    color: #0f136d;
+    height: auto;
+  }
+  &__list {
+    height: auto;
+    list-style: none;
+    padding: 0;
+    box-sizing: border-box;
+    &-li {
+      font-weight: 200;
+      line-height: 17px;
+      height: auto;
+      color: #0f136d;
+      text-decoration: none;
+      font-size: 14px;
+
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+}

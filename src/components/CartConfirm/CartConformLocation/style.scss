@@ -1,0 +1,31 @@
+.CartConfirmLocation {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    border-bottom: 1px solid rgba($color: #000000, $alpha: 0.2);
+    &-label {
+        width: 100%;
+        height: auto;
+        font-size: 14px;
+        color: #9e9e9e;
+        letter-spacing: 0;
+        line-height: 18px;
+        margin-bottom: 11px;
+    }
+    &-body {
+        display: flex;
+        width: 100%;
+        height: auto;
+        i {
+            font-size: 16px;
+            color: #9e9e9e;
+            margin-right: 20px;
+            height: auto;
+        }
+        &-address {
+            color: #202020;
+            height: auto;
+            font-size: 12px;
+        }
+    }
+}

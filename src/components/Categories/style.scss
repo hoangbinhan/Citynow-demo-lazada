@@ -1,0 +1,10 @@
+.categories {
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  .cardContent {
+    margin-top: 10px;
+  }
+}

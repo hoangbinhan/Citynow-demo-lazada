@@ -1,0 +1,116 @@
+.CartConfirmInfo {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    &__heading {
+        font-size: 18px;
+        color: #212121;
+        margin-bottom: 14px;
+        font-weight: 500;
+        height: auto;
+    }
+    &__content {
+        width: 100%;
+        height: auto;
+
+        &-checkout {
+            width: 100%;
+            height: 100%;
+
+            &-row {
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: space-between;
+                margin: 15px 0;
+                &-label {
+                    height: auto;
+                    font-size: 14px;
+                    color: #757575;
+                    letter-spacing: 0;
+                    line-height: 21px;
+                }
+                &-value {
+                    height: auto;
+                    font-size: 16px;
+                    line-height: 21px;
+                    text-align: right;
+                    color: #202020;
+                }
+            }
+        }
+
+        &-voucher {
+            width: 100%;
+            height: 40px;
+            display: flex;
+
+            &-input {
+                height: 100%;
+                flex-grow: 3;
+                margin-right: 10px;
+                border: none;
+                input {
+                    width: 100%;
+                    height: 100%;
+                    border: 1px solid rgba($color: #000000, $alpha: 0.2);
+                    padding-left: 10px;
+                    font-size: 14px;
+                    outline: none;
+                    transition: all 0.3s;
+                }
+                input:focus {
+                    border-color: #1a9cb7;
+                }
+            }
+            &-button {
+                flex-grow: 1;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 14px;
+                color: white;
+                background-color: #1a9cb7;
+                cursor: pointer;
+            }
+        }
+    }
+    &__content-order {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+        // background-color: red;
+        &-total {
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            &-title {
+                font-size: 14px;
+                color: #202020;
+                line-height: 16px;
+                height: auto;
+            }
+            &-fee {
+                font-size: 18px;
+                color: #f57224;
+                text-align: right;
+                height: auto;
+            }
+        }
+        &-button {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f57224;
+            color: white;
+            padding: 12px 0;
+            border-radius: 3px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+    }
+}

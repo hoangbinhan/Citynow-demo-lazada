@@ -1,0 +1,15 @@
+.context-menu {
+  width: 150px;
+  height: auto;
+  z-index: 10;
+  background-color: white;
+  position: fixed;
+  &__btn {
+    width: 100%;
+    height: auto;
+    padding: 7px 7px;
+    background-color: white;
+    border: 1px solid rgba($color: #00ff, $alpha: 0.4);
+    font-size: 12px;
+  }
+}
