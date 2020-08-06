@@ -1,5 +1,5 @@
 import axios from 'axios';
-import Info from 'components/Info';
+import Info from 'pages/DetailProduct/main/Info';
 import React, { useEffect, useState } from 'react';
 import './style.scss';
 

@@ -1,6 +1,6 @@
 import { getCartItem } from 'actions/cart';
-import CartConfirm from 'components/CartConfirm';
-import CartItem from 'components/CartItem';
+import CartConfirm from 'pages/Cart/components/CartConfirm';
+import CartItem from 'pages/Cart/components/CartItem';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './style.scss';
