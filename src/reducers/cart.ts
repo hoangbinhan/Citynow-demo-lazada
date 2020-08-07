@@ -2,14 +2,18 @@ import * as type from 'constants/types/actionType';
 import { productId } from 'constants/types/cartType';
 import { cartState } from 'constants/types/state';
 import { AddToCartAction } from './../constants/types/cartType';
-import { stat } from 'fs';
 
-const initialState: cartState = {
-  productId: [],
-  number: 0,
-};
+const cart = localStorage.getItem('CART_LAZADA');
+
+const initialState: cartState = cart
+  ? JSON.parse(cart)
+  : {
+      productId: [],
+      number: 0,
+    };
 
 export default (state = initialState, action: AddToCartAction) => {
+  console.log('state', state);
   let index = -1;
   switch (action.type) {
     case type.ADD_TO_CART:
@@ -21,6 +25,7 @@ export default (state = initialState, action: AddToCartAction) => {
         state.number += action.payload.quantity;
         state.productId.push(action.payload);
       }
+      localStorage.setItem('CART_LAZADA', JSON.stringify(state));
       return {
         ...state,
       };
@@ -34,6 +39,7 @@ export default (state = initialState, action: AddToCartAction) => {
         state.number += action.payload.quantity;
         state.productId[index].quantity += action.payload.quantity;
       }
+      localStorage.setItem('CART_LAZADA', JSON.stringify(state));
       return {
         ...state,
       };
@@ -44,6 +50,7 @@ export default (state = initialState, action: AddToCartAction) => {
         state.number -= state.productId[index].quantity;
         state.productId.splice(index, 1);
       }
+      localStorage.setItem('CART_LAZADA', JSON.stringify(state));
       return {
         ...state,
       };

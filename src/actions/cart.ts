@@ -1,6 +1,8 @@
+import { products } from './../constants/types/productsType';
 import { AddToCart, DeleteItemInCart } from './../constants/types/cartType';
 import { Dispatch } from 'react';
 import * as type from 'constants/types/actionType';
+import axios from 'axios';
 
 export const getCartItem = () => (dispatch: Dispatch<{ type: string }>) => {
   dispatch({
@@ -38,4 +40,20 @@ export const deleteItemInCart = (productId: String) => (
       productId: productId,
     },
   });
+};
+
+export const fetchProducts = (cart: []) => (dispatch: Dispatch<products>) => {
+  axios
+    .get('http://localhost:8080/products')
+    .then((res) => {
+      if (res.status === 200) {
+        dispatch({
+          type: type.FETCH_PRODUCTS,
+          payload: res.data,
+        });
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 };

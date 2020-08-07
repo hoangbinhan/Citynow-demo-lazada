@@ -5,11 +5,12 @@ import Home from './pages/Home';
 import DetailProduct from './pages/DetailProduct';
 import { Provider } from 'react-redux';
 import store from './store';
-import Navbar from './components/Navbar';
+import Navbar from './base/Navbar';
 import Cart from './pages/Cart';
-import Footer from './components/Footer';
-import NotFound from 'components/NotFound';
+import Footer from './base/Footer';
+import NotFound from 'base/NotFound';
 import Products from 'pages/Products';
+import Loading from 'base/Loading';
 
 function App() {
   return (
