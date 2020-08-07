@@ -1,9 +1,8 @@
-import React from 'react';
-
-import './style.scss';
 import { product } from 'constants/types/productsType';
-import CartItemHeader from '../CartItemHeader';
+import React from 'react';
 import CartItemBody from '../CartItemBody';
+import CartItemHeader from '../CartItemHeader';
+import './style.scss';
 
 interface Props {
   product: product;

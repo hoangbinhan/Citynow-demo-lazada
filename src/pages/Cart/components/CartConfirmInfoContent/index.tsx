@@ -5,7 +5,7 @@ import { AppState } from 'reducers';
 import CartConfirmInfoContentCheckout from '../CartConfirmInfoContentCheckout';
 import CartConfirmInfoContentVoucher from '../CartConfirmInfoContentVoucher';
 import CartConfirmInfoContentOrder from '../CartConfirmInfoContentOrder';
-
+import { subTotal } from 'pages/Cart/Utils/cartUtils';
 interface Props {
   listProducts: productInCart[];
 }
@@ -13,21 +13,13 @@ interface Props {
 const CartConfirmInfoContent: React.FC<Props> = ({ listProducts }) => {
   const { cart } = useSelector((state: AppState) => state);
 
-  const subTotal = () => {
-    let result = listProducts.reduce((currentTotal, item) => {
-      return currentTotal + parseInt(item.product.price) * item.quantity;
-    }, 0);
-    return Math.round(result * 100) / 100;
-  };
+  const sub = subTotal(listProducts);
 
   return (
     <div className='CartConfirmInfo__content'>
-      <CartConfirmInfoContentCheckout
-        number={cart.number}
-        subTotal={subTotal()}
-      />
+      <CartConfirmInfoContentCheckout number={cart.number} subTotal={sub} />
       <CartConfirmInfoContentVoucher />
-      <CartConfirmInfoContentOrder subTotal={subTotal()} />
+      <CartConfirmInfoContentOrder subTotal={sub} />
     </div>
   );
 };

@@ -49,7 +49,6 @@ const CartItemBody: React.FC<Props> = ({ product, quantity }) => {
           +
         </div>
       </div>
-      {/* <Popup title='hihi' description='aiai' type='sd' /> */}
     </div>
   );
 };

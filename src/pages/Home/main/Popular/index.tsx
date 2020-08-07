@@ -7,7 +7,7 @@ const Popular: React.FC = () => {
   let results = Populars.map((item, index) => {
     let isLeft = false;
     if (index === 0) {
-      isLeft = false;
+      isLeft = true;
     }
     return (
       <Item

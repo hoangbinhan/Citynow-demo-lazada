@@ -1,6 +1,6 @@
 import { getCartItem } from 'actions/cart';
-import CartConfirm from 'pages/Cart/components/CartConfirm';
-import CartItem from 'pages/Cart/components/CartItem';
+import CartConfirm from 'pages/Cart/main/CartConfirm';
+import { getProductInCart, showCartItem } from 'pages/Cart/Utils/cartUtils';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './style.scss';
@@ -11,40 +11,13 @@ export default function Cart() {
   const number = useSelector((state) => state.cart.number);
   const products = useSelector((state) => state.cart.productId);
   const listProduct = useSelector((state) => state.products.product);
+  const listProductsCart = getProductInCart(listProduct, products);
 
-  const getProductInCart = (products, cart) => {
-    let result = [];
-    for (let i = 0; i < cart.length; i++) {
-      let temp = products.find((item) => {
-        return item.id === cart[i].productId;
-      });
-      let obj = { product: { ...temp }, quantity: cart[i].quantity };
-      result.push(obj);
-    }
-    return result;
-  };
   useEffect(() => {
     dispatch(action);
     return () => {};
   }, [dispatch, number]);
 
-  const showCartItem = (products) => {
-    let result = [];
-    if (products.length > 0) {
-      result = products.map((item, index) => {
-        return (
-          <CartItem
-            key={index}
-            product={item.product}
-            quantity={item.quantity}
-          />
-        );
-      });
-    }
-    return result;
-  };
-
-  let listProductsCart = getProductInCart(listProduct, products);
   if (number > 0) {
     return (
       <div className='cart grid'>

@@ -1,8 +1,8 @@
 import { productInCart } from 'constants/types/productsType';
 import CartConfirmLocation from 'pages/Cart/components/CartConformLocation';
 import React from 'react';
-import CartConfirmInfo from '../CartConfirmInfo';
 import './style.scss';
+import CartConfirmInfo from 'pages/Cart/components/CartConfirmInfo';
 
 interface Props {
   products: productInCart[];
