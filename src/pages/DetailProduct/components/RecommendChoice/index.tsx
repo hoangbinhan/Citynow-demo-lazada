@@ -9,11 +9,12 @@ import RecommendChoiceButton from 'pages/DetailProduct/atom/RecommendChoiceButto
 interface Props {
   item: product[];
   deleteItem: Function;
+  handleRemoveList: Function;
 }
 
 const RecommendChoice: React.FC<Props> = (props) => {
   const dispatch = useDispatch();
-  const { item, deleteItem } = props;
+  const { item, deleteItem, handleRemoveList } = props;
 
   const addItems = (item: product[]) => {
     try {
@@ -21,6 +22,7 @@ const RecommendChoice: React.FC<Props> = (props) => {
         const action = addToCart(item[i].id, 1);
         dispatch(action);
       }
+      handleRemoveList();
     } catch (err) {
       console.log('err :>> ', err);
     }

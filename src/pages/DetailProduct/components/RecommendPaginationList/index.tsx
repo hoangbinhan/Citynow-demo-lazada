@@ -1,6 +1,7 @@
 import useEventListener from 'hooks/use-event-listener';
 import RecommendPaginationItem from 'pages/DetailProduct/atom/RecommendPaginationItem';
 import React, { useCallback } from 'react';
+import { Pagination } from 'antd';
 
 interface Props {
   postsPerPage: number;

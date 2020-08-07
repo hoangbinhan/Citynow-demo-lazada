@@ -57,7 +57,13 @@ const Recommend: React.FC<Props> = (props) => {
         paginate={paginate}
         currentPage={currentPage}
       />
-      <RecommendChoice item={tempRecommendChoice} deleteItem={deleteItem} />
+      <RecommendChoice
+        item={tempRecommendChoice}
+        deleteItem={deleteItem}
+        handleRemoveList={() => {
+          setTempRecommendChoice([]);
+        }}
+      />
     </div>
   );
 };

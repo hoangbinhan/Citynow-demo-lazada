@@ -11,7 +11,7 @@ const RecommendPaginationItem: React.FC<Props> = (props) => {
   const { className, content, paginate, currentPage } = props;
 
   return (
-    <li className={className} onClick={() => paginate(currentPage - 1)}>
+    <li className={className} onClick={() => paginate(currentPage)}>
       {content}
     </li>
   );
