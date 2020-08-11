@@ -16,7 +16,11 @@ const Mall: React.FC = () => {
     );
   });
 
-  return <div className='store'>{results}</div>;
+  return (
+    <div className='store' id='ScrollControl-LazMall'>
+      {results}
+    </div>
+  );
 };
 
 export default Mall;

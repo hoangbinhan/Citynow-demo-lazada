@@ -1,4 +1,5 @@
 import { getCartItem } from 'actions/cart';
+import { fetchProducts } from 'actions/products';
 import CartConfirm from 'pages/Cart/main/CartConfirm';
 import { getProductInCart, showCartItem } from 'pages/Cart/Utils/cartUtils';
 import React, { useEffect } from 'react';
@@ -8,6 +9,7 @@ import './style.scss';
 export default function Cart() {
   const dispatch = useDispatch();
   const action = getCartItem;
+  const actionFetchProduct = fetchProducts;
   const number = useSelector((state) => state.cart.number);
   const products = useSelector((state) => state.cart.productId);
   const listProduct = useSelector((state) => state.products.product);

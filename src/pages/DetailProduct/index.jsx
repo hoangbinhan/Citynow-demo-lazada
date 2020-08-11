@@ -2,6 +2,7 @@ import axios from 'axios';
 import Info from 'pages/DetailProduct/main/Info';
 import React, { useEffect, useState } from 'react';
 import './style.scss';
+import Delivery from './main/Delivery';
 
 export default function DetailProduct(props) {
   const [product, setProduct] = useState({});
@@ -20,6 +21,7 @@ export default function DetailProduct(props) {
   return (
     <div className='info-product grid'>
       <Info product={product} />
+      <Delivery />
     </div>
   );
 }

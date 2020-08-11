@@ -1,0 +1,20 @@
+.InnerWidth2__download-text {
+    margin: 0 20px;
+    height: auto;
+    width: auto;
+    &-title {
+        width: auto;
+        height: auto;
+        font-size: 16px;
+        font-weight: 300;
+        color: #f36f36;
+    }
+    &-description {
+        width: auto;
+        height: auto;
+        font-size: 14px;
+        font-weight: 300;
+        color: #0f136d;
+        padding-top: 2px;
+    }
+}

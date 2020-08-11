@@ -1,16 +1,15 @@
-import React from 'react';
-import './App.css';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import DetailProduct from './pages/DetailProduct';
-import { Provider } from 'react-redux';
-import store from './store';
-import Navbar from './base/Navbar';
-import Cart from './pages/Cart';
-import Footer from './base/Footer';
 import NotFound from 'base/NotFound';
 import Products from 'pages/Products';
-import Loading from 'base/Loading';
+import React from 'react';
+import { Provider } from 'react-redux';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Footer from './base/Footer';
+import Navbar from './base/Navbar';
+import Cart from './pages/Cart';
+import DetailProduct from './pages/DetailProduct';
+import Home from './pages/Home';
+import store from './store';
+import './App.css';
 
 function App() {
   return (

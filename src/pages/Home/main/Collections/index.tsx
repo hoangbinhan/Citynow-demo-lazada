@@ -16,7 +16,11 @@ const collections: React.FC = () => {
       />
     );
   });
-  return <div className='Collections'>{results}</div>;
+  return (
+    <div className='Collections' id='ScrollControl-Collection'>
+      {results}
+    </div>
+  );
 };
 
 export default collections;

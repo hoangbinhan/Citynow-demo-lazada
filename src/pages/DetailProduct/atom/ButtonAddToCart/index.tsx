@@ -3,7 +3,8 @@ import './style.scss';
 import { addToCart } from 'actions/cart';
 import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
-
+import { notification } from 'antd';
+import { SmileOutlined } from '@ant-design/icons';
 interface Props {
   quantity: number;
 }
@@ -15,7 +16,11 @@ const ButtonAddToCart: React.FC<Props> = ({ quantity }) => {
     try {
       const action = addToCart(productId, quantity);
       dispatch(action);
-      console.log('da them vao gio hang thanh cong ');
+      notification.open({
+        message: 'Thêm giỏ hàng thành công',
+        description: 'sản phẩm mới được thêm vào giỏ hàng của bạn',
+        icon: <SmileOutlined style={{ color: '#108ee9' }} />,
+      });
     } catch (err) {
       console.log('err :>> ', err);
     }

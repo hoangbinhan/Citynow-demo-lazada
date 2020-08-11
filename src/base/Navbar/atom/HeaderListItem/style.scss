@@ -1,0 +1,15 @@
+.headerList__item {
+    height: 100%;
+    &-link {
+        text-decoration: none;
+        color: #aaa;
+        font-size: 12px;
+        margin: 0 14px;
+    }
+    &-blue {
+        color: #0f1568;
+    }
+    &link:hover {
+        color: #f57224;
+    }
+}

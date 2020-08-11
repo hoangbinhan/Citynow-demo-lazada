@@ -32,6 +32,7 @@ export default (state = initialState, action: AddToCartAction) => {
     case type.GET_NUMBER_CART:
       return { ...state };
     case type.GET_CART_ITEM:
+      console.log('state', state);
       return { ...state };
     case type.CHANGE_NUMBER_ITEM:
       index = findProductInCart(state.productId, action.payload.productId);

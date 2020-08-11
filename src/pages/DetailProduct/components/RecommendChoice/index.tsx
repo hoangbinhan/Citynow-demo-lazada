@@ -5,7 +5,8 @@ import { useDispatch } from 'react-redux';
 import './style.scss';
 import RecommendChoiceItem from 'pages/DetailProduct/atom/RecommendChoiceItem';
 import RecommendChoiceButton from 'pages/DetailProduct/atom/RecommendChoiceButton';
-
+import { notification } from 'antd';
+import { SmileOutlined } from '@ant-design/icons';
 interface Props {
   item: product[];
   deleteItem: Function;
@@ -17,15 +18,23 @@ const RecommendChoice: React.FC<Props> = (props) => {
   const { item, deleteItem, handleRemoveList } = props;
 
   const addItems = (item: product[]) => {
-    try {
-      for (let i = 0; i < item.length; i++) {
-        const action = addToCart(item[i].id, 1);
-        dispatch(action);
+    if (item.length > 0) {
+      try {
+        for (let i = 0; i < item.length; i++) {
+          const action = addToCart(item[i].id, 1);
+          dispatch(action);
+        }
+        notification.open({
+          message: 'Thêm giỏ hàng thành công',
+          description: 'sản phẩm mới được thêm vào giỏ hàng của bạn',
+          icon: <SmileOutlined style={{ color: '#108ee9' }} />,
+        });
+        handleRemoveList();
+      } catch (err) {
+        console.log('err :>> ', err);
       }
-      handleRemoveList();
-    } catch (err) {
-      console.log('err :>> ', err);
     }
+    return;
   };
 
   useEffect(() => {

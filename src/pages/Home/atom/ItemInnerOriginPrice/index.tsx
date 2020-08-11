@@ -12,8 +12,8 @@ const ItemInnerOriginPrice: React.FC<Props> = (props) => {
   return (
     <div className='cardContent-origin-price'>
       <div className='origin-price'>
-        <div className='price'>{currentPrice}</div>
-        <div className='currency'> ₫</div>
+        <div className='origin-price-price'>{currentPrice}</div>
+        <div className='origin-price-currency'> ₫</div>
       </div>
       <span className='discount'>{discount}</span>
     </div>

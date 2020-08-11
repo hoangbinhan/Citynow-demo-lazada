@@ -1,8 +1,13 @@
 .carousel {
   width: calc(100% - 200px);
   height: 100%;
-  background-color: red;
-  display: block;
+  // display: block;
+  h3 {
+    height: 100%;
+    color: "#fff";
+    text-align: "center";
+    background: "#364d79";
+  }
   &__track {
     list-style: none;
     padding: 0;

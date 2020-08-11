@@ -43,13 +43,13 @@ a:link {
       display: flex;
       margin: 0 7px;
       height: 22px;
-      .price {
+      &-price {
         color: #d66d49;
         font-size: 20px;
         line-height: 20px;
         height: 22px !important;
       }
-      .currency {
+      &-currency {
         color: #d66d49;
         font-size: 30px;
         height: 22px;
@@ -63,14 +63,15 @@ a:link {
       .origin-price {
         display: flex;
         height: 14px;
-        .price {
+        &-price {
+          height: auto;
           font-size: 12px;
           color: #333;
           text-decoration: line-through;
-          height: 100%;
+          margin: 0;
         }
-        .currency {
-          height: 100%;
+        &-currency {
+          height: auto;
           font-size: 12px;
           color: #333;
         }

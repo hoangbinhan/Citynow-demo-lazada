@@ -9,8 +9,8 @@ const ItemInnerPrice: React.FC<Props> = (props) => {
 
   return (
     <div className='cardContent-price'>
-      <div className='price'>{price}</div>
-      <div className='currency'> ₫</div>
+      <div className='cardContent-price-price'>{price}</div>
+      <div className='cardContent-price-currency'> ₫</div>
     </div>
   );
 };

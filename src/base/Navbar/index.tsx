@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import NavbarBody from './NavbarBody';
-import NavbarList from './NavbarList';
+import NavbarBody from './main/NavbarBody';
+import NavbarList from './main/NavbarList';
 import './style.scss';
 
 const Navbar: React.FC = () => {

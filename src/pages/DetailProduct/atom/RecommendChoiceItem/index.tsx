@@ -10,7 +10,7 @@ const RecommendChoiceItem: React.FC<Props> = (props) => {
   return (
     <div className='RecommendChoice__list-item'>
       <div className='RecommendChoice__list-item-title'>{item.name}</div>
-      <div className='RecommendChoice__list-item-price'>{item.price}</div>
+      <div className='RecommendChoice__list-item-price'>{item.price} đ</div>
       <i className='fas fa-trash' onClick={() => deleteItem(item)}></i>
     </div>
   );

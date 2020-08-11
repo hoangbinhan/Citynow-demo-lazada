@@ -27,7 +27,8 @@ export const showCartItem = (products) => {
 
 export const subTotal = (listProducts) => {
   let result = listProducts.reduce((currentTotal, item) => {
-    return currentTotal + parseInt(item.product.price) * item.quantity;
+    return currentTotal + item.product.price * item.quantity;
   }, 0);
-  return Math.round(result * 100) / 100;
+  // return Math.round(result * 100) / 100;
+  return result.toFixed(2);
 };

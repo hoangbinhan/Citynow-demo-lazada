@@ -1,0 +1,32 @@
+.delivery__header-location {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    margin-bottom: 10px;
+    i {
+        font-size: 16px;
+        height: auto;
+        margin-right: 10px;
+        line-height: 16px;
+    }
+    &-address {
+        font-size: 14px;
+        height: auto;
+    }
+    &-change {
+        width: 80px;
+        height: auto;
+        color: #01839e;
+        cursor: pointer;
+        font-size: 12px;
+        margin-left: 10px;
+    }
+}
+
+.select__location {
+    position: fixed;
+    width: 200px;
+    height: 400px;
+    z-index: 2;
+}

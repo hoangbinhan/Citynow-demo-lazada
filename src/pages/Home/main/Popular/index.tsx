@@ -21,7 +21,7 @@ const Popular: React.FC = () => {
   });
 
   return (
-    <div className='popular'>
+    <div className='popular' id='ScrollControl-Popular'>
       <div className='popular__left'>{results.shift()}</div>
       <div className='popular__right'>{results.slice(0, results.length)}</div>
     </div>

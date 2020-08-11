@@ -18,7 +18,7 @@ const Deal: React.FC = () => {
     );
   });
   return (
-    <div className='deal'>
+    <div className='deal' id='ScrollControl-Deal'>
       <DealHeader status='Đang bán' />
       <div className='deal__body'>{results}</div>
     </div>

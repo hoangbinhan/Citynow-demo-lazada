@@ -1,0 +1,18 @@
+.delevery__header-title {
+    display: flex;
+    height: auto;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    span {
+        font-size: 12px;
+        color: #757575;
+        font-weight: 500;
+        height: auto;
+    }
+    i {
+        font-size: 14px;
+        color: #757575;
+        cursor: pointer;
+        height: auto;
+    }
+}

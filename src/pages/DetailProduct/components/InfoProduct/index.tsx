@@ -5,6 +5,7 @@ import InfoProductNumberPicker from 'pages/DetailProduct/components/InfoProductN
 import React, { useState } from 'react';
 import InfoProductButtonBox from '../InfoProductButtonBox';
 import Recommend from '../Recommend';
+import InfoProductPromotion from 'pages/DetailProduct/atom/InfoProductPromotion';
 
 interface Props {
   product: product;
@@ -26,6 +27,7 @@ const InfoProduct: React.FC<Props> = (props) => {
   return (
     <div className='product-detail'>
       <InfoProductDetail product={product} />
+      <InfoProductPromotion />
       <InfoProductNumberPicker
         quantity={quantity}
         changeNumber={onChangeNumber}
